@@ -1,0 +1,25 @@
+body{
+    background-color: navajowhite;
+}
+
+table{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+}
+
+#box-01{
+    background-color: green;
+}
+
+#box-02{
+    background-color: blue;
+}
+
+#box-03{
+    background-color: salmon;
+}
+
+#box-04{
+    background-color: aqua;
+}

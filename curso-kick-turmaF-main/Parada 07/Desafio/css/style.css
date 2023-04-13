@@ -1,0 +1,15 @@
+body{
+    background-color: antiquewhite;
+}
+
+table{
+    width: 600px;
+    height: 400px;
+    
+}
+
+#header-box, #content-box-1{
+    background-color: #04724d;
+    text-align: center;
+    color: white;
+}

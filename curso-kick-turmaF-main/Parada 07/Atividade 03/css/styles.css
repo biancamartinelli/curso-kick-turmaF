@@ -1,0 +1,24 @@
+body{
+    background-color: antiquewhite;
+}
+
+table{
+    height: 400px;
+    width: 600px;
+}
+
+#box-01{
+    background-color: green;
+}
+
+#box-02{
+    background-color: blue;
+}
+
+#box-03{
+    background-color: salmon;
+}
+
+#box-04{
+    background-color: aqua;
+}
