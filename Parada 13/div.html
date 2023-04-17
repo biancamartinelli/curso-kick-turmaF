@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+               
+        body{
+            background-color: darkgray;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        #box-1:hover, #box-2:hover, #box-3:hover, #box-4:hover{
+            background-color: rgba(255, 255, 255, 0.520);
+            border: 2px solid black;
+            cursor: pointer;
+        }
+        #box-1{
+            background-color: salmon;
+            left: 800px;
+            top: 100px;
+            border: 2px solid red;
+            z-index: 3;
+        }
+
+        #box-2{
+            background-color: greenyellow;
+            left: 850px;
+            top: 150px;
+            z-index: 2;
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+    <div id="box-3"></div>
+    <div id="box-4"></div>
+</body>
+</html>
