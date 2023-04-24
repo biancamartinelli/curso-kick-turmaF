@@ -55,7 +55,7 @@ Uma jornada tecnológica e socioemocional totalmente sem custo para jovens de es
       📍Net Framework
   
 
-📌 Banco de Dados (Trilha Específica
+📌 Banco de Dados (Trilha Específica)
 
       📍MySQL
   
