@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: auto;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: auto;
+        }
+
+        #header {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 10px;
+            flex-direction: co;
+            align-items: center;
+        }
+
+        img{
+            width: 120%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="header">
+            <div class="box">
+                <img src="img/moto1.jpg">
+            </div>
+            <div class="box">
+                <img src="img/moto2.jpg">
+            </div>
+            <div class="box">
+                <img src="img/moto3.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

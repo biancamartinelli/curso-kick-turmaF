@@ -41,6 +41,10 @@ body{
     background: var(--bg);
 }
 
+section{
+    padding: 2rem 7%;
+}
+
 .btn{
     margin-top: 1rem;
     display:inline-block;
@@ -68,7 +72,7 @@ body{
 }
 
 .header .logo img{
-    height: 15rem;
+    height: 7rem;
 }
 
 .header .navbar a{
@@ -106,8 +110,12 @@ body{
     height: 5rem;
     display: flex;
     align-items: center;
-    transform: scaley(0);
+    transform: scaleY(0);
     transform-origin: top;
+}
+
+.header.search-form .active{
+    transform: scaleY(1);
 }
 
 .header .search-form input{
@@ -138,6 +146,11 @@ body{
     background: #fff;
     padding: 0 1.5rem;
 }
+
+.header .cart-items-container .active{
+    right: 0;
+}
+
 
 .header .cart-items-container .cart-item{
     position: relative;
@@ -216,9 +229,13 @@ body{
     .header{
         padding: 1.5rem 2rem;
     }
+
+    section{
+        padding: 2rem;
+    }
 }
 
-@media (max-width:991px){
+@media (max-width:768px){
     #menu-btn{
         display: inline-block;
     }
@@ -231,6 +248,10 @@ body{
         height: calc(100vh - 9.5rem);
     }
 
+    .header .navbar .active{
+        right: 0;
+    }
+
     .header .navbar a{
         color:var(--black);
         display: block;
@@ -238,4 +259,59 @@ body{
         padding:.5rem;
         font-size: 2rem;
     }
+    
+   .header.search-form{
+    width 90%;
+    right: 2rem;
+   }
+
+   .home{
+    background-position: left;
+    justify-content: center;
+    text-align: center;
+   }
+
+   .home .content h3{
+    font-size: 4.5rem;
+   }
+
+   .home .content p{
+    font-size: 1.5rem;
+   }
+
+
 }
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background:url(../img/home10.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 60rem;
+}
+
+.home .content h3{
+   font-size: 6rem;
+   text-transform: uppercase;
+   color: #d3ad7f;
+}
+
+.home .content p{
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #fff;
+ }
