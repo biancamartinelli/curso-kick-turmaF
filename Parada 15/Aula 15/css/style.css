@@ -94,11 +94,10 @@ body{
     flex-wrap: wrap;
     align-items: center;
     padding: 150px;
-    margin-top: 300px;
+    margin-top: 150px;
     align-items: center;
     justify-content: center;
-    width: auto;
-
+    padding: auto;
 }
 
 
