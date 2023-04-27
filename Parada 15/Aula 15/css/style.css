@@ -23,6 +23,7 @@ body{
     align-items: center;
     padding: 0px;
     margin-top: 100px;
+    font-weight: bold
 }
 
 #header img{
@@ -36,6 +37,7 @@ body{
     margin-left: 50px;
     margin-right: 50px;
 }
+
 
 #header ul{
     position: relative;
@@ -55,6 +57,7 @@ body{
     line-height: 1.17;
     padding: 16px;
     border-top: 0 
+    
 }
 
 #header a{
@@ -63,3 +66,48 @@ body{
     font-weight: 900;
     font-size: 1em;
 }
+
+.botao01{
+    background: -webkit-linear-gradient(bottom, red, red 70%);
+    border: 1px solid black;
+    border-radius: 3px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .3);
+    color: white;
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-shadow:1px 1px 0 red;
+    padding: 5px 15px;
+    position: relative;
+    width: 80px;
+}
+
+#header-inner {
+    position: absolute;
+    height: auto;
+    background-color: #fffffff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 150px;
+    margin-top: 300px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+
+}
+
+
+#header-inner a{
+    line-height: 1.00;
+    padding: 0px;
+    border-top: 0; 
+
+}
+
+
+
