@@ -135,3 +135,16 @@ body{
         margin-left: auto;
     }
   
+    .review .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 1.5rem;
+    }
+
+    .review .box-container .box{
+        border:var(--border);
+        text-align: center;
+        padding: 3rem 2rem;
+
+    }
+}
