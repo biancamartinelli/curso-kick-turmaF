@@ -8,6 +8,7 @@
   
     openNavMenu.addEventListener("click", toggleNav);
     closeNavMenu.addEventListener("click", toggleNav);
+
     // close the navMenu by clicking outside
     menuOverlay.addEventListener("click", toggleNav);
   
@@ -20,18 +21,22 @@
     navMenu.addEventListener("click", (event) =>{
         if(event.target.hasAttribute("data-toggle") && 
             window.innerWidth <= mediaSize){
+
             // prevent default anchor click behavior
             event.preventDefault();
             const menuItemHasChildren = event.target.parentElement;
+
           // if menuItemHasChildren is already expanded, collapse it
           if(menuItemHasChildren.classList.contains("active")){
               collapseSubMenu();
           }
           else{
+
             // collapse existing expanded menuItemHasChildren
             if(navMenu.querySelector(".menu-item-has-children.active")){
               collapseSubMenu();
             }
+
             // expand new menuItemHasChildren
             menuItemHasChildren.classList.add("active");
             const subMenu = menuItemHasChildren.querySelector(".sub-menu");
@@ -39,17 +44,21 @@
           }
         }
     });
+
     function collapseSubMenu(){
         navMenu.querySelector(".menu-item-has-children.active .sub-menu")
         .removeAttribute("style");
         navMenu.querySelector(".menu-item-has-children.active")
         .classList.remove("active");
     }
+    
     function resizeFix(){
+
          // if navMenu is open ,close it
          if(navMenu.classList.contains("open")){
              toggleNav();
          }
+
          // if menuItemHasChildren is expanded , collapse it
          if(navMenu.querySelector(".menu-item-has-children.active")){
               collapseSubMenu();

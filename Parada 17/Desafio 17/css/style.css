@@ -47,7 +47,7 @@ a{
 .header .logo a{
 	font-size: 30px;
 	text-transform: capitalize;
-	color: #e91e63;
+	color:  #ba8266;
 	font-weight: 600;
 }
 .header .nav-menu{
@@ -90,14 +90,14 @@ a{
 }
 .header .menu > .menu-item:hover > a .plus:before,
 .header .menu > .menu-item:hover > a .plus:after{
-   background-color: #e91e63;
+   background-color: #ba8266;
 }
 .header .menu > .menu-item > a .plus:after{
    transform: translate(-50%,-50%) rotate(-90deg);	
 }
 .header .menu > .menu-item > .sub-menu > .menu-item > a:hover,
 .header .menu > .menu-item:hover > a{
-	color: #e91e63;
+	color: #ba8266;
 }
 .header .menu > .menu-item > .sub-menu{
 	box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -107,7 +107,7 @@ a{
 	top:100%;
 	background-color: #ffffff;
 	padding: 10px 0;
-	border-top: 3px solid #e91e63;
+	border-top: 3px solid #ba8266;
 	transform: translateY(10px);
 	transition: all 0.3s ease;
 	opacity:0;
@@ -204,7 +204,7 @@ a{
 }
 
 
-/* responsive */
+/* responsivo */
 
 @media(max-width: 991px){
 	.header .menu-overlay.active{
