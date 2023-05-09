@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        #nome{
+            color: blue;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #idade{
+            color: pink;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #local{
+            color:brown;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="nome"></div>
+    <div id="idade"></div>
+    <div id="local"></div>
+
+    <script>
+        let nome =""
+        let idade =""
+        let local = ""
+
+        nome = prompt("Qual é o seu nome: ")
+        idade = prompt("Quntos anos você tem? ")
+        local = prompt("Aonde você mora? ")
+
+        document.getElementById("nome").innerHTML = nome
+        document.getElementById("idade").innerHTML = idade 
+        document.getElementById("local").innerHTML = local
+
+    </script>
+</body>
+</html>
