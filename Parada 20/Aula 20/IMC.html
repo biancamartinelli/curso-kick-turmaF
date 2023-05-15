@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          
+        let peso = parseFloat(prompt("Digite o seu peso em kg: "))
+        let altura = parseFloat(prompt("Digite sua altura em metros: "))
+
+        let imc = peso / (altura ** 2)
+
+        if(IMC < 18.5){
+            console.log("Abaixo do peso")
+        }else if (imc < 25){
+            console.log("Peso normal")
+        }else if (imc < 30){
+            console.log("Acima do peso")
+        }else{
+            console.log("Obeso")
+        }
+    </script>
+</html>
