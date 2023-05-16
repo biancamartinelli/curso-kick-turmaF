@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+</head>
+<body>
+    <div id="main" style="background-color: black; color:lightblue; font-size: 40px;text-align: center;"></div>
+     <script>
+
+        let login = "bianca";
+        let senha = 2222;
+             do{
+                login = prompt("Informe seu login: ");
+                senha = parseInt(prompt("Informe sua senha: ")); 
+                    if ((login == "bianca") && (senha == 2222)) { 
+                        document.getElementById("main").innerHTML ="<h2>Acesso Permitido..... Olá  "+ login + "</h2>";
+                    }else {
+                        alert("VALORES INVÁLIDOS!")
+                    }
+                    
+                } while( (login != "bianca") || (senha != 2222));
+    </script>
+</body>
+</html>
