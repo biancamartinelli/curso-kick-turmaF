@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: rgba(0, 0, 0, 0.584);
+        }
+        #title{
+            color: rgb(237, 100, 150);
+            font-size: 50px;
+            text-align: center;
+        }
+        #main, #box{
+            color: lightslategray;
+            font-size: 40px;
+            text-align: center;
+        }
+    </style>
+    <title>Desafio 21</title>
+</head>
+<body>
+    <div id="title"></div>
+    <div id="main"></div>
+    <div id="box"></div>
+    <script>
+        let opcao = 5;
+
+        let cont1 = 0;
+        let cont2 = 0;
+        let cont3 = 0;
+        let cont4 = 0;
+        let cont5 = 0;
+
+        let soma_votos = 0;
+        
+        while(opcao != 0){
+            opcao = parseInt(prompt("Digite seu voto: Digite 1 - Candidato A; Digite 2 - Candidato B; Digite 3 - Candidato C - Digite 4 - Candidato D; Digite 0 - Sair"));
+
+            if(opcao < 0 || opcao > 4){
+                    alert("Você votou NULO");
+                    opcao = 5;
+                    cont5++;
+                    soma_votos++;
+                    continue;
+                }
+                
+            switch(opcao){
+            case 1:
+                alert("Você votou no candidato A");
+                opcao = 1;
+                cont1++;
+                soma_votos++;
+                continue;
+
+            case 2:
+                alert("Você votou no candidato B");
+                opcao = 2;
+                cont2++;
+                soma_votos++;
+                continue;
+                
+            case 3:
+                alert("Você votou no candidato C");
+                opcao = 3;
+                cont3++;
+                soma_votos++;
+                continue;
+
+            case 4:
+                alert("Você votou no candidato D");
+                opcao = 4;
+                cont4++;
+                soma_votos++;
+                continue;
+
+            case 0:
+                alert("Fim da votação");
+                opcao = 0;
+                break;
+            }
+        }
+
+        document.getElementById("title").innerHTML = "<h1> Sistema de votação <h1/>"
+        
+        document.getElementById("main").innerHTML = `Candidato A - ${cont1} votos <br> Candidato B - ${cont2} votos <br> Candidato C - ${cont3} votos <br> Candidato D - ${cont4} votos <br> Nulos - ${cont5} votos`;
+
+        document.getElementById("box").innerHTML = `<br>Foram computados ${soma_votos} votos`
+        
+    </script>
+</body>
+</html>
