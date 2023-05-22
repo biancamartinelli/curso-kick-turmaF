@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+</head>
+<body>
+    <script>
+        const jogador = prompt("Qual o seu nome?")
+        let op = 10
+        let cont = 0
+        let pontuacao = 0
+        let resposta
+
+        while(op != 0){
+            op = parseInt(prompt("Qual tema você deseja jogar? \n 1 - Zoologia \n 2 - Astronomia \n 3 - Microbiologia \n 0 - Sair"))
+
+            switch(op){
+                case 1:
+                    resposta = prompt("o maior animal que já viveu é um dinossauro. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("a teoria da evolução diz que o mais forte sobrevive. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("aves são dinossauros. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    alert(`${jogador}, você fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+
+                case 2:
+                    resposta = prompt("No sistema solar o sol fica em cima da terra. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("Existe mais de 99+ sois no sistema solar. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("A lua mais famosa do sistema é a Phobos(Lua de Marte). Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    alert(`${jogador}, você fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+
+                    case 3:
+                    resposta = prompt("O meio de cultivo Agar MacConkey é considerado um meio de cultivo seletivo?. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("O meio de cultivo Agar MacConkey permite crescimento de bactérias gram-positivas? Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    resposta = prompt("O meio de cultivo Agar MacConkey este meio é recomendado para utilização com amostras clínicas com probabilidade de conter microbiota mista como, por exemplo, a urina, fezes, vias respiratórias, feridas, secreções e outras fontes? Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                    }else{
+                        alert("resposta incorreta, ...")
+                    }
+                    alert(`${jogador}, você fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+                case 0:
+                    alert('Você saiu!')
+                    break
+                default:
+                    alert('Digite uma opcao valida')
+                    break
+            }
+        }
+        
+    </script>
+</body>
+</html>
