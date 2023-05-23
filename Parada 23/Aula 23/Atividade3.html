@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <style>
+        body{
+            background-color: rgb(128, 128, 173);
+        }
+        .main{
+            margin: auto;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            margin-top: 5%;
+        }
+        button{
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            display: inline-flex;
+            justify-content: space-around;
+            cursor: pointer;
+            border: 3px black solid;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Loja VR-Tech</h1>
+        <button onclick="compras('computador')">Computador</button>
+        <button onclick="compras('camera')">camera</button>
+        <button onclick="compras('celular')">celular</button>
+    </div>
+    <script>
+        function compras(item){
+            switch(item){
+                case "celular":
+                    if(confirm("celular custa R$2800")){
+                        alert('parabens pela compra')
+                        window.open("https://www.amazon.com.br/Iphone-Apple-Branco-64gb-Desbloqueado/dp/B08N1MG4VL/ref=sr_1_14?adgrpid=118774891334&hvadid=593184164341&hvdev=c&hvlocphy=1032132&hvnetw=g&hvqmt=e&hvrand=11582806568670793196&hvtargid=kwd-351687404127&hydadcr=17155_13443063&keywords=celular+amazon&qid=1684881668&sr=8-14&ufe=app_do%3Aamzn1.fos.25548f35-0de7-44b3-b28e-0f56f3f96147")
+                    }else{
+                        alert('quem sabe na próxima')
+                    }
+                    break
+                case "computador":
+                    if(confirm("celular custa R$5000")){
+                        alert('parabens pela compra')
+                    }else{
+                        alert('quem sabe na próxima')
+                    }
+                    break
+                case "camera":
+                    if(confirm("celular custa R$2000")){
+                        alert('parabens pela compra')
+                    }else{
+                        alert('quem sabe na próxima')
+                    }
+                    break
+                default:
+                    alert("item invalido")
+                break
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var item = prompt("O que vc deseja comprar? \n Celular \n Computador \n Camera")
+
+        compras(item)
+
+        function compras(item){
+            switch(item){
+                case "celular":
+                    if(confirm("celular custa R$ 2.800")){
+                        alert("Parabens pela compra")
+                    }else{
+                        alert("Quem sabe na proxima?")
+                    }
+                    break
+
+                    case "computador":
+                    if(confirm("celular custa R$ 5.800")){
+                        alert("Parabens pela compra")
+                    }else{
+                        alert("Quem sabe na proxima?")
+                    }
+                    break
+
+                    case "camera":
+                    if(confirm("celular custa R$ 3.800")){
+                        alert("Parabens pela compra")
+                    }else{
+                        alert("Quem sabe na proxima?")
+                    }
+                    break
+                default:
+                    alert("item invalido")
+                break
+            }
+
+        }
+    </script>
+</body>
+</html>

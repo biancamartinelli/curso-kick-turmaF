@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <style>
+
+        body {
+            background-color: lavender;
+        }
+
+        .main{
+            margin: auto;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        button {
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            display: inline-flex;
+            justify-content: space-around;
+            cursor: pointer;
+            border: 3px black solid;
+            background-color: darkcyan;
+        }
+
+    </style>
+</head>
+<body id="bg">
+    <div class="main">
+        <p>Mude a cor</p>
+        <button>Clique para mudar</button>
+
+    </div>
+
+    <script>
+
+        var btn = document.querySelector("button");
+
+        btn.onclick = function(){
+            let aleatorio = Math.floor(Math.random() *4) + 1;
+
+            switch (aleatorio) {
+                case 1:
+                    document.body.style.backgroundColor = 'blue';       
+                    document.getElementsByTagName("p")[0].innerHTML = "azul"
+                break
+
+                case 2:
+                    document.body.style.backgroundColor = 'red';       
+                    document.getElementsByTagName("p")[0].innerHTML = "vermelho"
+                break   
+
+                case 3:
+                    document.body.style.backgroundColor = 'pink';       
+                    document.getElementsByTagName("p")[0].innerHTML = "rosa"
+                break   
+
+                case 4:
+                    document.body.style.backgroundColor = 'green';       
+                    document.getElementsByTagName("p")[0].innerHTML = "verde"
+                break   
+             }
+            
+        }
+
+    </script>
+</body>
+</html>

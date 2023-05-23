@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+    <style>
+        .main{
+            margin: auto;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        .verde, .azul, .rosa {
+            color: white;
+            padding: 20px;
+            font-size: 16px;
+            display: inline-flex;
+            justify-content: space-around;
+            cursor: pointer;
+            border: 3px black solid;
+        }
+
+        .verde{
+            background-color: #4caf50;
+        }
+
+        .azul{
+            background-color: darkblue;
+        }
+
+        .rosa{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body id="bg">
+    <div class="main">
+        <button class="verde" onclick="trocaCor(cor = '#4caf50')">Verde</button>
+        <button class="azul" onclick="trocaCor(cor = 'darkblue')">Azul</button>
+        <button class="rosa" onclick="trocaCor(cor = 'pink')">Rosa</button>
+
+    </div>
+
+    <script>
+
+        trocaCor(cor="blue")
+
+        function trocaCor(cor){
+            console.log(cor)
+            document.getElementById("bg").style = `background-color: ${cor};`
+        }
+
+    </script>
+</body>
+</html>
