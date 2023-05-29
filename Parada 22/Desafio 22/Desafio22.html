@@ -4,9 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 22</title>
+    <title>Document</title>
 </head>
 <body>
-    
+    <script>
+
+        let op = 10
+        let cont = 0
+        let pontuacao = 0
+        let resposta
+        let jogador
+
+        nome_jogador()
+
+        perguntas()
+
+        function nome_jogador(){
+            jogador = prompt("Qual o seu nome?")
+            opcoes()
+        }
+
+
+        function opcoes(){
+            while(op != 0){
+                op = parseInt(prompt(`Qual tema você deseja jogar, ${jogador}? \n 1 - Zoologia \n 2 - Astronomia \n 3 - Microbiologia \n 0 - Sair`))
+
+            if(op == 1 || op == 2 || op == 3){
+                perguntas();
+            } else if(op != 0) {
+                alert('Digite uma opção válida');
+            }
+
+            }
+        }
+
+        function perguntas(){
+            switch(op){
+                case 1:
+                    resposta = prompt("o maior animal que já viveu é um dinossauro. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("a teoria da evolução diz que o mais forte sobrevive. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("aves são dinossauros. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    alert(`${jogador}, vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+                case 2:
+                    resposta = prompt("Vênus é o planeta mais quente do sistema solar. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("Marte é o maior planeta do sistema solar. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("Apollo 11 foi o nome da primeira missão de ida à Lua. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    alert(`${jogador}, vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+                case 3:
+                    resposta = prompt("Um argumento correto que pode ser usado para apoiar a idéia de que os vírus são seres vivos é o de que eles utilizam o mesmo código genético das outras formas de vida. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("No grupo dos fungos, são conhecidas perto de 100 mil espécies. Esse grupo tão diverso inclui espécies que formam, com as raízes de plantas, associações chamadas micorrizas, mutuamente benéficas, pela troca de nutrientes. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "verdadeiro"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    resposta = prompt("Existem vírus que realizam respiração aeróbica no interior da cápsula proteica.. Verdadeiro ou Falso").toLowerCase()
+                    if(resposta == "falso"){
+                        pontuacao++
+                        alert("Certa resposta!")
+                    }else{
+                        alert("Resposta incorreta ...")
+                    }
+                    alert(`${jogador}, vc fez ${pontuacao} pontos`)
+                    pontuacao = 0
+                    break
+                case 0:
+                    alert('Você saiu')
+                    break
+                default:
+                    alert('Digite uma opcao válida')
+                    break
+            }
+        }
+
+    </script>
 </body>
 </html>
