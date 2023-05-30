@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 24</title>
+</head>
+<body>
+    <style>
+
+    </style>
+    <div class="main" style= "width: 30%; margin: auto auto; text-align: center;"> 
+        <h1>Universidade Orcinus Orca</h1>
+        <p> Escolha um curso</p>
+
+        <select id="opcoes" onchange="troca()">
+            <option value="Medicina">Medicina</option>
+            <option value="Medicina">Biologicas</option>
+            <option value="Medicina">Tecnologia</option>
+            <option value="Medicina">Exatas</option>
+        </select>
+
+        <h3 id="curso"></h3>
+
+        <button onclick="confirma()">Confirma</button>
+
+        <input type="text" id="campoTexto" onkeypress="tecla()"/></form>
+
+    </div>
+    <script>
+
+        function tecla() {
+            document.getElementById("campoTexto").style.backgroundColor = "yellow";
+            alert("Voce pressionou uma tecla")
+        }
+
+        function troca() {
+            var op = document.getElementById("opcoes").value
+            document.getElementById("curso").innerHTML = "Você escolheu: " + op
+        }
+
+        function confirma() {
+            var op = document.getElementById("opcoes").value
+            alert(`Você irá estudar: ${op}`)
+        }
+
+        function login(usuario, senha) {
+            if (usuario == "bianca" && senha == 1234){
+                return true
+            }else{
+                return false
+            }
+        }
+    
+    </script>
+</body>
+</html>
