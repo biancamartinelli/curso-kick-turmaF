@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Temperatura</h2>
+        <input type="text" id="temperatura"/>
+        <select id="opcao" onchange="convert()">
+            <option value="">Escolha</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+        </select>
+        <h3 id="temp"></h3>
+    </div>
+    <script>
+
+        function convert(){
+            var temperatura = parseFloat(document.getElementById("temperatura").value)
+            var op = document.getElementById("opcao").value
+
+            switch(op){
+                case "kelvin":
+                    document.getElementById("temp").innerHTML = "A temperatura em kelvin equivale a " + (temperatura + 273)
+                    console.log((temperatura + 273))
+                break
+                case "fahrenheit":
+                document.getElementById("temp").innerHTML = "A temperatura em fahrenheit equivale a " + ((temperatura * 1.8)+32)
+                    console.log((temperatura * 1.8)+32)
+                break
+            }
+        }
+    </script>
+</body>
+</html>
