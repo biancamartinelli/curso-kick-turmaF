@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 Erros</title>
+    <style>
+      .container {
+        margin: auto;
+        width: 80%;
+        background-color: rgba(0, 0, 0, 0.498);
+        color: white;
+        text-align: center;
+        height: 100%;
+      }
+
+      body {
+        background: url("https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      .main {
+        height: 100%;
+        width: 100%;
+      }
+      .box {
+        width: 400px;
+        height: 400px;
+        background-color: aqua;
+        margin: 20px;
+        background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .imagens {
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container">
+        <h1>Tech Dino</h1>
+        <div class="imagens">
+          <div class="box"></div>
+          <div class="box"></div>
+        </div>
+        <div>
+          <button onclick="lista()">Listar produtos</button>
+          <div id="produtos"></div>
+        </div>
+        <div style="margin-top: 100px; margin-bottom: 100px">
+          <select id="opcao" onchange="preco()">
+            <option value="">Escolha</option>
+            <option value="computador">Computador</option>
+            <option value="celular">Celular</option>
+            <option value="mouse">Mouse</option>
+            <option value="teclado">Teclado</option>
+          </select>
+          <h2 id="valor"></h2>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function lista() {
+        var produtos = [
+          "computador",
+          "teclado",
+          "mouse",
+          "notebook",
+          "celular",
+        ];
+
+        var listaItem = document.createElement("ul");
+
+        var listaContainer = document.getElementById("produtos");
+        listaContainer.innerHTML = "";
+
+        for (let i = 0; i  < produtos.length; i++) {
+          listaItem = document.createElement("li");
+
+          listaItem.innerHTML = podrutes[i];
+
+          listaContainer.appendChild(listaItem);
+        }
+      }
+
+      function preco() {
+        var op = document.getElementById("opcao").value;
+
+        console.log(op);
+
+        switch (op) {
+          case "computador":
+            document.getElementById(
+              "valor"
+            ).innerHTML = `Preço do produto ${op} é R$2500`;
+            break;
+          case "teclado":
+            document.getElementById(
+              "valor"
+            ).innerHTML = `Preço do produto ${op} é R$300`;
+            break;
+          case "mouse":
+            document.getElementById(
+              "valor"
+            ).innerHTML = `Preço do produto ${op} é R$150`;
+            break;
+          case "celular":
+            document.getElementById(
+              "valor"
+            ).innerHTML = `Preço do produto ${op} é R$2800`;
+            break;
+          case "notebook":
+            document.getElementById(
+              "valor"
+            ).innerHTML = `Preço do produto ${op} é R$5000`;
+            break;
+        }
+      }
+
+      function comprar() {
+        var confirma = confirm("Tem certeza que deseja comprar?");
+        if (confirma) {
+          console.log("comprou");
+          return true;
+        } else {
+          console.log("não comprou");
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

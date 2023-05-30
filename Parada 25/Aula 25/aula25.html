@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+
+
+        lista()
+
+        function lista(){
+            var usuarios = ["thalita", "bianca", "carina", "tilto"]
+            var senhas = ["1111","2222","3333","3333","4444"]
+
+            var listaItem = document.createElement("ul")
+
+            var listaContainer = document.getElementById("container")
+
+            for (let i = 0; i < usuarios.length; i++){
+                //criando elemento li
+                listaItem = document.createElement("li")
+
+                listaItem.innerHTML = usuarios[i]
+                //ciando elemento filho
+                listaContainer.appendChild(listaItem)
+            }
+
+        }
+
+    </script>
+</body>
+</html>
