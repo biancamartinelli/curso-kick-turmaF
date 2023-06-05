@@ -5,19 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 24</title>
+    <style>
+        #botao{
+            width: 80px;
+            height: 80px;
+            margin: 25% calc(50% - 40px);
+            border: 1px solid black;
+            margin-bottom: 30px;
+            background-color: pink;
+        }
+
+        #botao:hover{
+            border: 3px solid black;
+        }
+
+        #main{            
+            margin-top: 0px;
+            margin-left: calc(50% - 60px);
+            margin-right: calc(50% - 60px);           
+            width: 120px;
+            height: 25px;         
+            font-size: 20px;
+            border:1px solid black;
+            background-color: white;
+            color: pink;            
+            display: flex;        
+            justify-content: center;          
+        }
+    </style>
+
+
+     <script>
+    function nomeAleatorio() {
+    var nomes = ['Bianca', 'Carina', 'Vitor', 'Dan', 'Tilto', 'Yago', 'Kyra', 'Felipe', 'Giovani', 'Camila'];
+     var indiceAleatorio = Math.floor(Math.random() * nomes.length);
+     return nomes[indiceAleatorio];
+    }
+
+    function preencheSpan(){
+        var nome = nomeAleatorio();
+        document.getElementById('minha-span').innerText = nome;
+        console.log(nomeAleatorio);
+    }
+
+    </script>
 </head>
 <body>
-    <script>
-        sorteioDeNome()
-
-        console.log(nome);
-
-        function sorteioDeNome() {
-            var nomes = ["Bianca", "Yago", "Dan", "Tilto", "Kyra", "Carina", "Vitor", "Felipe", "Giovani", "Camila"];
-            var sorteio = nomes[Math.floor(Math.random() * nomes.length)];
-            return sorteio;
-        }
-        
-    </script>
+    <button id="botao" onclick="preencheSpan()">clique aqui</button>
+    <div id="main"><span id="minha-span"></span></div>
+   
 </body>
 </html>
