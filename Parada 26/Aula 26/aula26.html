@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <div class="container">
+        <form action="aula26.html" id="cadastro">
+            <label>Nome:</label>
+            <input type="text" id="name" placeholder="Digite seu nome" required>
+
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="Digite seu email">
+
+            <label>Senha:</label>
+            <input type="password" id="password" placeholder="Digite sua senha" required>
+
+            <label>Idade:</label>
+            <input type="numb" id="age" placeholder="Digite sua idade">
+
+            <label>Gênero:</label>
+            <select id="gender" name="gender"> 
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="nao-binario">Não Binário</option>
+                <option value="outro">Outro</option>
+            </select>
+
+            <label>Mensagem:</label>
+            <textarea id="mensagem" name="message" placeholder="Digite uma mensagem"></textarea>
+
+            <input type="submit" value="Enviar" id="submit" onclick="">
+        </form>
+    </div>
+    <script>
+        function getPassword() {
+            var formulario = document.getElementById("cadastro");
+
+            alert(formulario.elements["password"].value);
+        }
+    </script>
+</body>
+</html>
