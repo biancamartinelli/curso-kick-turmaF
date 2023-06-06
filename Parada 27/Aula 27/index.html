@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada 27</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form id="formulario" onsubmit="return valida()" method="post">
+            <label for="">Nome</label>
+            <input type="text" id="nome" placeholder="Coloque seu nome">
+            <label for="">Sobrenome</label>
+            <input type="text" id="sobrenome" placeholder="Seu Sobrenome">
+            <label for="">Idade</label>
+            <input type="text" id="idade" placeholder="Coloque sua idade 18 a 40 anos">
+            <label for="">Email</label>
+            <input type="mail" id="email">
+            <label for="">País</label>
+            <select id="pais">
+                <option>BR</option>
+                <option>Argentina</option>
+                <option>EUA</option>
+                <option>CHINA</option>
+            </select>
+            <label for="">Quais Linguagens você sabe?</label>
+            <input type="checkbox" value="python"> <span>Python</span>
+            <input type="checkbox" value="ruby"> <span>Ruby</span>
+            <input type="checkbox" value="golang"> <span>Go</span>
+            <label for="">Senha</label>
+            <input type="password" id="senha">
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+
+    <script>
+        function valida(){
+            let sobrenome = document.getElementById('sobrenome').value;
+
+            if(sobrenome == ''){
+                alert("Tem que preencher o sobrenome");
+                document.getElementById('sobrenome').focus();
+                return false;
+            }
+
+            let idade = document.getElementById('idade').value
+
+            if(isNaN(idade) || idade < 18 || idade > 100){
+                alert('idade invalida');
+                document.getElementById('idade').focus()
+                return false
+            }
+
+
+            var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if(email.value.math(mailformat)){
+
+            }else{
+                alert('email está invalido')
+                email.focus()
+                return false
+            }
+
+            let senhavalor = senha.value.lenght
+            if(senhavalor < 6){
+                alert('senha deve ser maior ou igual a 6')
+                return false
+            }
+
+            return true
+        }
+    </script>
+
+</body>
+</html>
