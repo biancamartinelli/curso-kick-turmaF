@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: linear-gradient(to right top, #040151, #13186d, #202e8a, #2b44a9, #345cc8, #3567d6, #3573e4, #347ff2, #2d81f2, #2583f1, #1c84f1, #1186f0);
+    background-image: linear-gradient(to left bottom, #112ad3, #0074ff, #00a4ff, #00ccdc, #00eeb9);
     background-attachment: fixed;
     background-size: cover;
     margin: 0px;
@@ -62,7 +62,7 @@ form {
   input[type="submit"] {
     width: 35%;
     margin-top: 20px;
-    background-color: #3ef244;
+    background-color: #7ecbf3;
     color: #282828;
     border: none;
     cursor: pointer;
@@ -78,7 +78,7 @@ form {
 
   input[type="submit"]:hover{
     width: 95%;
-    background-color: #1cb009;
+    background-color: #59acff;
     color: #f6f6f6;
     text-shadow: 4px 4px 4px #000000;
     box-shadow: 4px 4px 4px #000000;
