@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right top, #040151, #13186d, #202e8a, #2b44a9, #345cc8, #3567d6, #3573e4, #347ff2, #2d81f2, #2583f1, #1c84f1, #1186f0);
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+}
+
+.container{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+h1{
+    text-align: center;
+    color: #fff9f9;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 4px #454545;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 400px;
+    display: block;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10px;
+    background-color: #a19d9d70;
+    padding: 20px;
+    box-shadow: 4px 4px 4px 2px #000000;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+  label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type=text],input[type=mail], select{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+
+  }
+  
+  input[type="submit"] {
+    width: 35%;
+    margin-top: 20px;
+    background-color: #3ef244;
+    color: #282828;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+  input[type="submit"]:hover{
+    width: 95%;
+    background-color: #1cb009;
+    color: #f6f6f6;
+    text-shadow: 4px 4px 4px #000000;
+    box-shadow: 4px 4px 4px #000000;
+    
+  }
