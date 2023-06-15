@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color:  rgb(0, 115, 255);;
+            animation-name: troca;
+            animation-duration: 4s;
+        }
+
+        @keyframes troca {
+        from {background-color: rgb(0, 115, 255);}
+        to {background-color: rgb(0, 255, 166);}
+        }
+
+        .box2 {
+          width: 100px;
+          height: 100px;
+          background-color: rgb(0, 0, 0);
+          position: relative;
+          animation-name: movimento;
+          animation-duration: 4s;
+          animation-iteration-count: infinite;
+        }
+        
+        @keyframes movimento {
+          0%   {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+          25%  {background-color:yellow; left:200px; top:0px;}
+          50%  {background-color:blue; left:200px; top:200px;}
+          75%  {background-color:green; left:0px; top:200px;}
+          100% {background-color:rgb(0, 0, 0); left:0px; top:0px;}
+        }
+
+        .gira{
+            width: 100px;
+            height: 100px;
+            margin-top: 300px;
+            position: relative;
+            animation-name: gira;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes gira {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /*====================
+        remover rotação, borda
+        aumentar widith e height
+        */
+
+        .lds-heart {
+            display: inline-block;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            transform-origin: 40px 40px;
+            }
+        .lds-heart div {
+            top: 32px;
+            left: 32px;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+        .lds-heart div:after,
+        .lds-heart div:before {
+            content: " ";
+            position: absolute;
+            display: block;
+            width: 80px;
+            height: 80px;
+            }
+        .lds-heart div:before {
+            left: -24px;
+            }
+        .lds-heart div:after {
+            top: -24px;
+            }
+        @keyframes lds-heart {
+            0% {
+                transform: scale(0.95);
+            }
+            5% {
+                transform: scale(1.1);
+            }
+            39% {
+                transform: scale(0.85);
+            }
+            45% {
+                transform: scale(1);
+            }
+            60% {
+                transform: scale(0.95);
+            }
+            100% {
+                transform: scale(0.9);
+            }
+        }
+
+        </style>
+        </head>
+<body>
+    
+    <div class="box"></div>
+    <div class="box2"></div>
+
+    <div>
+        <img class="gira" src="img/img1.jpg"/>
+    </div>
+
+    <div class="lds-heart">
+        <div> <img src="img/heart.png"/></div>
+    </div>
+
+</body>
+</html>
