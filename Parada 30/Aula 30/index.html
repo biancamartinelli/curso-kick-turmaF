@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parada 30</title>
+</head>
+<body>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(0, 115, 255);
+            animation-name: troca;
+            animation-duration: 4s;
+        }
+
+        @keyframes troca {
+            from {background-color: rgb(0, 115, 255);}
+            to {background-color: rgb(0, 255, 166);}
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: relative;
+            animation-name: movimento;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes movimento {
+            0% {background-image: url("https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/31b40200d3aa4e409a7bad5315a5d478.jpg"); left: 0px; top: 0px}
+            25% {background-image: url("https://gamingtrend.com/wp-content/uploads/2023/04/1-e1682345294577-1000x600.jpg"); left: 200px; top: 0px;}
+            50% {background-color: blue; left: 800px; top: 200px;}
+            75% {background-color: green; left: 0px; top: 200px;}
+            100% {background-image: url("https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/31b40200d3aa4e409a7bad5315a5d478.jpg"); left: 0px; top: 0px}
+        }
+
+        .gira {
+            width: 100px;
+            height: 100px;
+            margin-top: 300px;
+            position: relative;
+            animation-name: gira;
+            animation-duration: 2s;
+            animation-iteration-count: 2;
+        }
+
+        @keyframes gira {
+            0% {transform: rotate(0deg);}
+            100% {transform: rotate(360deg);}
+        }
+    </style>
+</body>
+    <div class="box"></div>
+    <div class="box2"></div>
+
+    <div>
+        <img src="img/img1.jpg" class="gira">
+    </div>
+</html>
