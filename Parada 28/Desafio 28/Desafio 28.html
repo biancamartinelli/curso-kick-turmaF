@@ -3,9 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 28</title>
+    <title>Desafio 28 - Carrossel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <h1>Seja bem vindo(a) à nossa página!</h1> 
+
+    <div class="carrossel">
+        <img src="img/1.jpg" alt="Imagem 1">
+        <img src="img/2.jpg" alt="Imagem 2">
+        <img src="img/3.jpg" alt="Imagem 3">
+        <img src="img/4.jpg" alt="Imagem 4">
+        <img src="img/5.jpg" alt="Imagem 5">
+      </div>
+
+    <script>
+        const carrossel = document.querySelector('.carrossel');
+        const images = carrossel.querySelectorAll('img');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                image.classList.add('active');
+                } else {
+                image.classList.remove('active');
+                }
+            });
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 2000);  
+    </script>
+
 </body>
 </html>

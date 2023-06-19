@@ -1,0 +1,41 @@
+body{
+    background-image: url(img/bg.jpg);
+    background-position: no-repeat;
+    background-size: cover;
+}
+h1{
+  text-align: center;
+  color: white;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.carrossel {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto; /* Centralizar horizontalmente */
+    display: flex;
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+}
+
+img{
+  border-radius: 2px;
+}
+
+.carrossel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.carrossel img.active {
+  opacity: 1;
+}
