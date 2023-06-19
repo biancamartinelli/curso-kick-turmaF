@@ -1,11 +1,11 @@
 body{
-    background-image: url(img/bg.jpg);
+    background-image: url(../img/bg.jpg);
     background-position: no-repeat;
     background-size: cover;
 }
 h1{
   text-align: center;
-  color: white;
+  color: aqua;
   font-weight: bolder;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
