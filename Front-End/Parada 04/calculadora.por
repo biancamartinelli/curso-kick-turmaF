@@ -1,4 +1,4 @@
-/Atividade da Parada 03 do Curso Kick! Turma F utilizando Portugol - Bianca e Ingrid/
+/Atividade da Parada 03 do Curso Kick! Turma F utilizando Portugol - Bianca e Ingrid//
 
 programa
 {
