@@ -25,10 +25,6 @@ Uma jornada tecnológica e socioemocional totalmente sem custo para jovens de es
       📍Testes
   
   
- 📌 Gestão de projetos
- 
-      📍Scrum
-
 
 📌 Front-end 
 
@@ -38,49 +34,10 @@ Uma jornada tecnológica e socioemocional totalmente sem custo para jovens de es
   
      📍JavaScript
   
-     📍AngularJS
-  
-  
+
   📌 BackEnd 
   
      📍Python
   
-  
-  📌 BackEnd (Trilha Específica)
-  
-      📍Node JS
-  
-      📍Do Net Core
-    
-      📍Net Framework
-  
 
-📌 Banco de Dados (Trilha Específica)
-
-      📍MySQL
   
-      📍SQL Server
-  
-      📍Elastic Search
-  
-      📍Mongo DB
-  
-
-  📌 Linguagem Mobile (Trilha Específica)
-  
-      📍Android
-  
-      📍React Native
-  
-      📍Android com Java
-  
-  
-  📌 Arquitetura de Software (Trilha Específica)
-  
-     📍MVC
-  
-     📍MVVM
-  
-     📍REST
-  
-     📍HTTP
