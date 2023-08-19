@@ -33,6 +33,12 @@ Uma jornada tecnológica e socioemocional totalmente sem custo para jovens de es
      📍CSS
   
      📍JavaScript
+
+     📍Figma
+
+     📍Wordpress
+
+     📍Bootstrap
   
 
   📌 BackEnd 
