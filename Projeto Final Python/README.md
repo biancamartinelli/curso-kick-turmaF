@@ -13,7 +13,7 @@ O compromisso com a igualdade educacional é fundamental para criar um país mai
 
 ##
 
-📌 O script em Python que deve automaticamente:
+📌 O script em Python deve automaticamente:
 
 📍Puxar os dados do site kaggle.com;
 
