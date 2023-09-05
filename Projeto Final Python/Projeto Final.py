@@ -13,135 +13,120 @@ print(df.head())
 #Gráfico Total
 import matplotlib.pyplot as plt
 
-cores = ['grey']  
+cores = ['grey', 'blue', 'green', 'orange', 'red', 'purple']
 
 qt_regiao = df.groupby('NO_REGIAO_IES')['QT_TEC_TOTAL'].sum()
 
-plt.plot(qt_regiao.index, qt_regiao.values, color=cores[0])
+plt.pie(qt_regiao.values, labels=qt_regiao.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.title('Funcionários Inscritos por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Funcionários')
-plt.grid(True, alpha=0.3)
-plt.savefig('professoresregiao.png')
+plt.title('Distribuição de Funcionários por Região')
+plt.axis('equal') 
+plt.savefig('professoresregiao_pizza.png')
 plt.show()
 
 
 #Gráfico Negras
 import matplotlib.pyplot as plt
 
-cores = ['black']  
+cores = ['grey', 'blue', 'green', 'orange', 'red', 'purple']
 
 doc_pretos = df.groupby('NO_REGIAO_IES')['DOC_EX_PRETA'].sum()
 
+plt.pie(doc_pretos.values, labels=doc_pretos.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_pretos.index, doc_pretos.values, color=cores[0])
-
-plt.title('Quantidade de Professores Negros por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores Negros por Região')
-plt.savefig('professorpreto.png')
+plt.title('Distribuição de Professores Negros por Região')
+plt.axis('equal')  
+plt.savefig('professorpreto_pizza.png')
 plt.show()
 
 
 #Gráfico Branco
 import matplotlib.pyplot as plt
 
-cores = ['red']  
+cores = ['red', 'blue', 'green', 'orange', 'purple']  
 
 doc_branca = df.groupby('NO_REGIAO_IES')['DOC_EX_BRANCA'].sum()
 
+plt.pie(doc_branca.values, labels=doc_branca.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_branca.index, doc_branca.values, color=cores[0])
-
-plt.title('Quantidade de Professores Brancos por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores Brancos por Região')
-plt.savefig('professorbranco.png')
+plt.title('Distribuição de Professores Brancos por Região')
+plt.axis('equal')  
+plt.savefig('professorbranco_pizza.png')
 plt.show()
 
 
 #Gráfico Amarela
 import matplotlib.pyplot as plt
 
-cores = ['green']  
+cores = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'orange']  
 
 doc_amarela = df.groupby('NO_REGIAO_IES')['DOC_EX_AMARELA'].sum()
 
+plt.pie(doc_amarela.values, labels=doc_amarela.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_amarela.index, doc_amarela.values, color=cores[0])
-
-plt.title('Quantidade de Professores Amarelos por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores Amarelos por Região')
-plt.savefig('professoramarelo.png')
+plt.title('Distribuição de Professores Amarelos por Região')
+plt.axis('equal')  
+plt.savefig('professoramarelo_pizza.png')
 plt.show()
 
 
 #Gráfico Indígena
 import matplotlib.pyplot as plt
 
-cores = ['orange']  
+cores = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'orange']  
 
 doc_indigenas = df.groupby('NO_REGIAO_IES')['DOC_EX_INDÍGENA'].sum()
 
-plt.plot(doc_indigenas.index, doc_indigenas.values, color=cores[0])
+plt.pie(doc_indigenas.values, labels=doc_indigenas.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.title('Quantidade de Professores Indígenas por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores Indígenas')
-plt.grid(True, alpha=0.3)
-plt.savefig('professorigenas.png')
+plt.title('Distribuição de Professores Indígenas por Região')
+plt.axis('equal')  
+plt.savefig('professorigenas_pizza.png')
 plt.show()
 
 #Gráfico PCD
 import matplotlib.pyplot as plt
 
-cores = ['magenta'] 
+cores = ['gold', 'lightcoral', 'lightskyblue', 'limegreen', 'orange']  
+
 doc_pcd = df.groupby('NO_REGIAO_IES')['DOC_EX_COM_DEFICIÊNCIA'].sum()
 
+plt.pie(doc_pcd.values, labels=doc_pcd.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_pcd.index, doc_pcd.values, color=cores[0])
-
-plt.title('Quantidade de Professores PCD por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores PCD por Região')
-plt.savefig('professorpcd.png')
+plt.title('Distribuição de Professores PCD por Região')
+plt.axis('equal')  
+plt.savefig('professorpcd_pizza.png')
 plt.show()
 
 #Gráfico Feminino
 import matplotlib.pyplot as plt
 
-cores = ['pink']  
+cores = ['pink', 'lightblue', 'lightgreen', 'purple', 'gold']  
 
 doc_fem = df.groupby('NO_REGIAO_IES')['DOC_EX_FEMI'].sum()
 
+plt.pie(doc_fem.values, labels=doc_fem.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_fem.index, doc_fem.values, color=cores[0])
-
-plt.title('Quantidade de Professores Mulheres por Região')
-plt.xlabel('Regiões')
-plt.ylabel('QQuantidade de Professores Mulheres por Região')
-plt.grid(True, alpha=0.3)
-plt.savefig('professorfem.png')
+plt.title('Distribuição de Professores Mulheres por Região')
+plt.axis('equal') 
+plt.savefig('professorfem_pizza.png')
 plt.show()
 
 #Gráfico Masculino
 import matplotlib.pyplot as plt
 
-cores = ['blue'] 
+
+cores = ['#FF9999', '#66B2FF', '#99FF99', '#FFCC99', '#c2c2f0', '#ffb3e6', '#c2f0c2', '#c2f0f0']
 
 doc_masc = df.groupby('NO_REGIAO_IES')['DOC_EX_MASC'].sum()
 
+plt.pie(doc_masc.values, labels=doc_masc.index, colors=cores, autopct='%1.1f%%', startangle=140)
 
-plt.plot(doc_masc.index, doc_masc.values, color=cores[0])
-
-plt.title('Quantidade de Professores Homens por Região')
-plt.xlabel('Regiões')
-plt.ylabel('Quantidade de Professores Homens por Região')
-plt.grid(True, alpha=0.3)
-plt.savefig('professormasc.png')
+plt.title('Distribuição de Professores Homens por Região')
+plt.axis('equal')
+plt.savefig('professormasc_pizza.png')
 plt.show()
+
 
 
 #Criar PDF
@@ -207,4 +192,3 @@ for titulo, imagem in zip(titulos, imagens):
 
 pdf.output('trabalhofinalpython-BiancaMartinelli.pdf')
 print("pdf salvo")
-
